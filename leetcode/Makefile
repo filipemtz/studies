@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++11
+CXXFLAGS = -Wall -Wextra -std=c++11 -g -Wno-sign-compare 
 SRCS := $(shell find . -type f -name '*.cpp')
 PROGS := $(patsubst %.cpp,%,$(SRCS))
 
@@ -9,7 +9,7 @@ all: $(PROGS)
 
 %: %.cpp
 	@mkdir -p $(dir $@)
-	-$(CXX) $(CXXFLAGS) $< -o $@
+	-$(CXX) $(CXXFLAGS) $< -o $@ -lm
 
 clean:
 	$(RM) -r $(PROGS)
