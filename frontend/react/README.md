@@ -1,6 +1,23 @@
 
 # The Basics of React
 
+For using react you must first install nodejs and the npm package manager. In ubuntu, you can use apt:
+
+```
+sudo apt update
+sudo apt install -y nodejs npm
+```
+
+For windows installation, refer to the [website](https://nodejs.org/en/download). 
+
+After installing the dependencies, use npm to install the packages for react development: 
+
+```
+npm install react react-dom
+```
+
+Alternatively, you can also download a template project such as the [react tutorial](https://react.dev/learn/tutorial-tic-tac-toe) and install its list of packages by running ```npm install``` in the project directory.
+
 Each react component is a javascript function that returns the html code to show the component. More precisely, it uses an extension of javascript called JSX that allows stuff such as: 
 
 ```
