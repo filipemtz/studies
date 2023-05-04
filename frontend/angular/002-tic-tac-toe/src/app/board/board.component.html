@@ -1,0 +1,22 @@
+<div>
+    <div class="status">{{status}}</div>
+    <div class="board-row">
+        <!-- <Square value={squares[0]} onSquareClick={()=> handleClick(0)} /> -->
+        <app-square [value]="squares[0]" (notify)="onNotify(0)"></app-square>
+        <app-square [value]="squares[1]" (notify)="onNotify(1)"></app-square>
+        <app-square [value]="squares[2]" (notify)="onNotify(2)"></app-square>
+    </div>
+    <div class="board-row">
+        <app-square [value]="squares[3]" (notify)="onNotify(3)"></app-square>
+        <app-square [value]="squares[4]" (notify)="onNotify(4)"></app-square>
+        <app-square [value]="squares[5]" (notify)="onNotify(5)"></app-square>
+    </div>
+    <div class="board-row">
+        <app-square [value]="squares[6]" (notify)="onNotify(6)"></app-square>
+        <app-square [value]="squares[7]" (notify)="onNotify(7)"></app-square>
+        <app-square [value]="squares[8]" (notify)="onNotify(8)"></app-square>
+    </div>
+    <div class="reset-link">
+        <a title='Restart the game' href='/'>Reset</a>
+    </div>
+</div>
